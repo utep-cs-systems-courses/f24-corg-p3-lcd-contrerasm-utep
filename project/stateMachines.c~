@@ -1,0 +1,55 @@
+#include <msp430.h>
+#include "stateMachines.h"
+#include "led.h"
+#include "buzzer.h"
+#include "switches.h"
+#include "libTimer.h"
+
+
+void next_state(int state){
+
+  
+
+  switch(state){
+
+  case 1://turns off both lights
+
+    //add music
+    //add image
+
+    break;
+
+  case 2://flashes red and green
+
+    //add words
+    //add music
+
+    break;
+
+  case 3://plays jingle
+
+    //add image on display
+
+    mcdonalds_jingle();
+
+
+    break;
+
+  case 4:
+    //add sound and image
+    
+
+    break;
+
+  default:
+
+   
+    break;
+
+  }
+
+  red_on();//light will remain on to let user know its ready
+
+
+
+}
