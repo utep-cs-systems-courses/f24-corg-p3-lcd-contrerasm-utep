@@ -45,7 +45,7 @@ install: libLcd.a
 
 
 
-main.elf: ${COMMON_OBJECTS} main.o led.o switches.o stateMachines.o buzzer.o wd_interrupt_handler.o p2_interrupt_vector.o libLcd.a ../lib/libTimer.a
+main.elf: ${COMMON_OBJECTS} main.o led.o switches.o stateMachines.o buzzer.o wd_interrupt_handler.o p2_interrupt_vector.o triangle.o libLcd.a ../lib/libTimer.a
 
 
 

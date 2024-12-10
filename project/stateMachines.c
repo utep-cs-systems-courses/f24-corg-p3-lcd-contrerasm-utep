@@ -18,7 +18,7 @@ void state_control(int state){
   case 1:
 
     song1();
-    drawUp(centerX,centerY,size,COLOR_ORANGE);
+    drawUp(centerX,centerY,size,COLOR_YELLOW);
    
     //add music
     //add image
@@ -28,7 +28,7 @@ void state_control(int state){
   case 2:
 
     song2();
-    
+    drawDown(centerX,centerY,size,COLOR_RED);
     //add words
     //add music
 
@@ -39,6 +39,7 @@ void state_control(int state){
     //add image on display
 
     song3();
+    drawLeft(centerX,centerY,size,COLOR_BLUE);
 
 
     break;
@@ -46,6 +47,7 @@ void state_control(int state){
   case 4:
     
     song4();
+    drawRight(centerX,centerY,size,COLOR_GREEN);
 
     break;
 
