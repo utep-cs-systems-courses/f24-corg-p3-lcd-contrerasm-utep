@@ -6,7 +6,7 @@
 #include "libTimer.h"
 
 
-void next_state(int state){
+void state_control(int state){
 
   
 
@@ -15,7 +15,7 @@ void next_state(int state){
   case 1://turns off both lights
 
     song1();
-    drawString5x7(100,100,"hello",COLOR_RED,COLOR_BLACK);
+   
     //add music
     //add image
 
@@ -51,7 +51,6 @@ void next_state(int state){
 
   }
 
-  red_on();//light will remain on to let user know its ready
 
 
 

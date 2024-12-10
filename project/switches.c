@@ -1,6 +1,6 @@
 #include <msp430.h>
 
-#include "timerLib/libTimer.h"
+#include "libTimer.h"
 
 #include "led.h"
 
@@ -53,13 +53,9 @@ void switch_interrupt_handler()
 {
 
   char p2val = switch_update_interrupt_sense();
-
   char button1 = (p2val & sw1) ? 0:sw1;
-
   char button2 = (p2val & sw2) ? 0:sw2;
-
   char button3 = (p2val & sw3) ? 0:sw3;
-
   char button4 = (p2val & sw4) ? 0:sw4;
 
 
@@ -68,7 +64,7 @@ void switch_interrupt_handler()
 
     {
 
-      next_state(1);
+      state_control(1);
 
       switch_state_down=1;
 
@@ -78,7 +74,7 @@ void switch_interrupt_handler()
 
     {
 
-      next_state(2);
+      state_control(2);
 
       switch_state_down=1;
 
@@ -88,7 +84,7 @@ void switch_interrupt_handler()
 
     {
 
-      next_state(3);
+      state_control(3);
 
       switch_state_down=1;
 
@@ -98,7 +94,7 @@ void switch_interrupt_handler()
 
     {
 
-      next_state(4);
+      state_control(4);
 
       switch_state_down=1;
 

@@ -9,7 +9,7 @@ CC              = msp430-elf-gcc
 AS              = msp430-elf-as
 all: main.elf
 
-main.elf: ${COMMON_OBJECTS} main.o led.o switches.o stateMachines.o buzzer.o wd_interrupt_handler.o p2_interrupt_vector.o libTimer.a
+main.elf: ${COMMON_OBJECTS} main.o led.o switches.o stateMachines.o buzzer.o wd_interrupt_handler.o p2_interrupt_vector.o ../lib/libTimer.a
 
 
 	${CC} ${CFLAGS} ${LDFLAGS} -o $@ $^

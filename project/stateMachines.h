@@ -4,7 +4,7 @@
 
 
 
-void state_advance();
+void state_control();
 
 
 
