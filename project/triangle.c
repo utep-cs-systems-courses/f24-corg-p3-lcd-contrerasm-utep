@@ -1,5 +1,6 @@
 #include "triangle.h"
 #include "lcddraw.h"
+#include "lcdutils.h"
 
 void drawUp(int startX, int startY, int size, unsigned int color) {
   for (int y = 0; y < size; y++) {

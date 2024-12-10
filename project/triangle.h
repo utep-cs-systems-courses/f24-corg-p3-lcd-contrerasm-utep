@@ -1,5 +1,5 @@
-#ifndef triangleDraw
-#define triangleDraw
+#ifndef triangle
+#define triangle
 #include "lcdutils.h"
 
 void drawUp(int startX, int startY, int size, unsigned int color);
