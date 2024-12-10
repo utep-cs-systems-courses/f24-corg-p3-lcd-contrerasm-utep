@@ -6,6 +6,7 @@
 #include "libTimer.h"
 #include "triangle.h"
 #include "lcdutils.h"
+#include "lcddraw.h"
 
 void state_control(int state){
 
@@ -18,6 +19,7 @@ void state_control(int state){
   case 1:
 
     song1();
+    clearScreen(COLOR_BLUE);
     drawUp(centerX,centerY,size,COLOR_YELLOW);
    
     //add music
@@ -28,6 +30,7 @@ void state_control(int state){
   case 2:
 
     song2();
+    clearScreen(COLOR_BLACK);
     drawDown(centerX,centerY,size,COLOR_RED);
     //add words
     //add music
@@ -39,6 +42,7 @@ void state_control(int state){
     //add image on display
 
     song3();
+    clearScreen(COLOR_RED);
     drawLeft(centerX,centerY,size,COLOR_BLUE);
 
 
@@ -47,11 +51,13 @@ void state_control(int state){
   case 4:
     
     song4();
+    clearScreen(COLOR_BROWN);
     drawRight(centerX,centerY,size,COLOR_GREEN);
 
     break;
 
   default:
+    clearScreen(COLOR_WHITE);
 
    
     break;
