@@ -50,8 +50,8 @@ void song1()
 {
 
   int jingle[] = {C5, E5, G5, E5, C5, E5, G5, E5, A4, C5, E5, C5, A4, A4, C5, A4};
-  int totalNotes =sizeof(jingle)/sizeof(jingle[0]);
-  for(int i=0; i<totalNotes;i++){
+  int totalNotes =sizeof(jingle)/sizeof(jingle[0]);//this is used to get the number of notes 
+  for(int i=0; i<totalNotes;i++){//used to iterate through array
 
     buzzer_set_period(jingle[i]);//play note
     __delay_cycles(2000000);//hold note
@@ -61,7 +61,7 @@ void song1()
 
   buzzer_set_period(0);//this is used to make sure the buzzer turns off
 
-}//end of mcdonalds
+}//end of song 1
 void song2()
 
 {
