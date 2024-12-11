@@ -43,9 +43,7 @@ install: libLcd.a
 
 	cp *.h ../h
 
-
-
-main.elf: ${COMMON_OBJECTS} main.o led.o switches.o stateMachines.o buzzer.o wd_interrupt_handler.o p2_interrupt_vector.o triangle.o libLcd.a ../lib/libTimer.a
+main.elf: ${COMMON_OBJECTS} main.o switches.o stateMachines.o buzzer.o wd_interrupt_handler.o led.o p2_interrupt_vector.o triangle.o libLcd.a ../lib/libTimer.a
 
 
 
@@ -61,3 +59,4 @@ clean:
 
 	rm -f *.o *.elf *~
 	rm -f libLcd.a *.o
+	rm -f led.o

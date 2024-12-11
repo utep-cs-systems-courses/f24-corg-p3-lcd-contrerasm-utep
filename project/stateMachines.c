@@ -8,6 +8,7 @@
 #include "lcdutils.h"
 #include "lcddraw.h"
 
+
 void state_control(int state){
 
   int centerX = screenWidth/2;
