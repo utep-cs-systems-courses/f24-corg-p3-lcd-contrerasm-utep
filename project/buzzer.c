@@ -1,12 +1,9 @@
 #include <msp430.h>
-
 #include "libTimer.h"
-
 #include "buzzer.h"
 
 
 void buzzer_init()
-
 {
 
   /*Diret timer A output "TA0.1 to P2.6.
@@ -100,12 +97,9 @@ void song3()
 void song4()
 {
 
-  int jingle[] = {0, 0, 0, E5, 0, E5, 0, E5, 0, 0, E5, 0, 0, A4, 0,A4};
-
-
+  int jingle[] = {0, A4, 0, E5, 0, E5, 0, E5, 0, 0, E5, 0, 0, A4, 0, A4};
 
   int totalNotes =sizeof(jingle)/sizeof(jingle[0]);
-
 
 
   for(int i=0; i<totalNotes;i++){

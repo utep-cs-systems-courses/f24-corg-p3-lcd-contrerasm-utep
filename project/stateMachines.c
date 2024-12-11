@@ -18,6 +18,7 @@ void state_control(int state){
 
   case 1:
 
+    led_init(0);
     song1();
     clearScreen(COLOR_BLUE);
     drawUp(centerX,centerY,size,COLOR_YELLOW);
@@ -28,7 +29,7 @@ void state_control(int state){
     break;
 
   case 2:
-
+    led_init(1);
     song2();
     clearScreen(COLOR_BLACK);
     drawDown(centerX,centerY,size,COLOR_RED);
@@ -40,7 +41,7 @@ void state_control(int state){
   case 3:
 
     //add image on display
-
+    led_init(0);
     song3();
     clearScreen(COLOR_RED);
     drawLeft(centerX,centerY,size,COLOR_BLUE);
@@ -49,7 +50,7 @@ void state_control(int state){
     break;
 
   case 4:
-    
+    led_init(1);
     song4();
     clearScreen(COLOR_BROWN);
     drawRight(centerX,centerY,size,COLOR_GREEN);

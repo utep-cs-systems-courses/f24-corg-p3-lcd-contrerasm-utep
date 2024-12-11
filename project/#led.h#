@@ -5,5 +5,4 @@
 #define LED BIT6; //BIT0 is needed for display
 
 void led_init(int on);
-
 #endif
