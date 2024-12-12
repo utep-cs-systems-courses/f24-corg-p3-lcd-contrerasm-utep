@@ -125,7 +125,6 @@ void draw_balls() {
   ball1Pos[0] = ball1Control[0];
   ball2Pos[0] = ball2Control[0];
 
-
   //draw new position
   draw_ball(ball1Pos[0], ball1Pos[1], ballColor);
   draw_ball(ball2Pos[0], ball2Pos[1], ballColor);
@@ -177,14 +176,13 @@ void wdt_c_handler() {
 
   static int secCount = 0;
   secCount++;
-
-  if (secCount >= 25) {  // 10/sec
+  
+  if (secCount >= 50){ 
     secCount = 0;
+    
 
-
-
-    // Toggle ball colors every second
-
+  
+  
     static int colorCount = 0;
     colorCount++;
     if(colorCount >= 10) {
@@ -197,7 +195,7 @@ void wdt_c_handler() {
 
     // Update ball positions
 
-    update_ball_positions();
+    
     // Handle jingle for SW2
 
     if(switches & SW2) {
@@ -222,6 +220,7 @@ void wdt_c_handler() {
 
 	  buzzer_set_period(period);
 	  noteIndex++;
+	  
 	} else {
 	  playingJingle = 0;
 	  buzzer_set_period(0);
@@ -242,18 +241,17 @@ void wdt_c_handler() {
     } else {
 
       trunkColor = COLOR_BROWN;
-
     }
-
-
 
     if(switches & SW4) return;
     redrawScreen = 1;
 
-  }
+  }//end of sec count
+  
+}//end of watch dog
 
-}
 void update_shape();
+
 void main() {
   P1DIR |= LED;
   P1OUT |= LED;
@@ -284,6 +282,7 @@ void main() {
 
 }
 void update_shape(){
+  update_ball_positions();
   draw_tree();
   draw_balls();
 }
