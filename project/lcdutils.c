@@ -5,9 +5,7 @@
  *  \brief Created on: 10/19/2016
 
  *  Author: Eric Freudenthal & David Pruitt
-
  *  Derived from EduKit code by RobG
-
  *  Chip select: P1.0
 
  *  Data/Cmd: P1.4
