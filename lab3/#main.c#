@@ -274,7 +274,6 @@ void main() {
     }
 
     led_init(0);
- 
     or_sr(0x10);
     led_init(1);
   }
