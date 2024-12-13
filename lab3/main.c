@@ -259,7 +259,7 @@ void main() {
   lcd_init();
   switch_init();
   buzzer_init();
-  
+  led_init(0);
 
   enableWDTInterrupts();
   or_sr(0x8);
@@ -274,7 +274,6 @@ void main() {
     }
 
     led_init(0);
- 
     or_sr(0x10);
     led_init(1);
   }
